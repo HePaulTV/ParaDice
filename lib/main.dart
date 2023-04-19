@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
+import 'dice_pool_6.dart';
+import 'dice_pool_10.dart';
 import 'myhomepage.dart';
-import 'dice.dart';
-import 'dicepool.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Paradice',
-      debugShowCheckedModeBanner: false,
+      title: 'Lanceur de dés Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Paradice'),
+      home: const MyHomePage(title: 'Lanceur de dés Flutter'),
     );
   }
 }
+
