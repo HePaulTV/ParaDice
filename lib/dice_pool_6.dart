@@ -7,25 +7,18 @@ class DicePool6 extends DicePool {
 
   // Méthodes de la classe
   @override
-  void ajouterDe6() {
+  void ajouter() {
     mesDice.add(Dice6());
   }
 
   @override
-  void ajouterDe10() {
-    // Pas utiliser
-  }
-
-  @override
-  void retirerDe6() {
+  void retirer() {
     int count = 1;
     mesDice.removeWhere((dice) => dice is Dice6 && count-- > 0);
   }
 
-  @override
-  void retirerDe10() {
-    // Pas utiliser
-  }
+  // Les méthodes ajouterDeX et retirerDeX ne sont pas nécessaires ici, car elles sont définies dans la classe de base DicePool.
+  // Vous pouvez les supprimer en toute sécurité.
 
   @override
   void reset() {

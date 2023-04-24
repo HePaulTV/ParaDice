@@ -9,10 +9,37 @@ abstract class DicePool {
   List<Dice> get mesDice => _mesDice;
 
   //Méthodes de la classe
-  void ajouterDe6();
-  void ajouterDe10();
-  void retirerDe6();
-  void retirerDe10();
+  void ajouterDe6() {
+    ajouter();
+  }
+
+  void ajouterDe10() {
+    ajouter();
+  }
+
+  void ajouterDe20() {
+    ajouter();
+  }
+
+  void ajouterDe100() {
+    ajouter();
+  }
+
+  void retirerDe6() {
+    retirer();
+  }
+
+  void retirerDe10() {
+    retirer();
+  }
+
+  void retirerDe20() {
+    retirer();
+  }
+
+  void retirerDe100() {
+    retirer();
+  }
 
   void lancerDes() {
     _results.clear(); // Réinitialiser la liste des résultats
@@ -24,11 +51,19 @@ abstract class DicePool {
     }
   }
 
+  int getPoolSize() {
+    return _mesDice.length;
+  }
 
-  void reset();
+  void ajouter() {}
+
+  void retirer() {}
+
+  void reset() {
+    _mesDice.clear();
+  }
 
   List<int> getResults() {
     return _results;
   }
 }
-
